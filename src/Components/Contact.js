@@ -138,7 +138,8 @@ const AppointmentForm = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            Get in touch to book your first appointment
+            {/* Get in touch to book your first appointment */}
+            Ready to Simplify Your Billing
           </motion.h1>
           
           <motion.p 
@@ -147,7 +148,7 @@ const AppointmentForm = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            Our medical professionals are ready to help you achieve better health. Schedule your appointment today and take the first step towards wellness.
+           Connect with our billing specialists today to streamline your revenue cycle and unlock your practice’s full potential. Reach out now and experience the difference expert support can make
           </motion.p>
           
           <div className="space-y-4">
@@ -162,7 +163,7 @@ const AppointmentForm = () => {
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
               </div>
-              <span className="text-slate-700">1800-657-876</span>
+              <span className="text-slate-700">9177721723</span>
             </motion.div>
             
             <motion.div 
@@ -282,7 +283,7 @@ const AppointmentForm = () => {
                 onChange={handleChange}
                 rows="4"
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all duration-200 outline-none"
-                placeholder="Tell us about your health concerns"
+                placeholder="Tell Us About Your Billing Needs"
               ></textarea>
             </motion.div>
 

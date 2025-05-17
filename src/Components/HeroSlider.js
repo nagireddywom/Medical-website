@@ -153,22 +153,22 @@ import { motion, AnimatePresence } from 'framer-motion';
 const slides = [
   {
     id: 1,
-    title: "Your Journey To Health",
-    description: "Welcome to the dynamic world of healthcare innovation and personalized wellness.",
+    title: "Smarter Billing Solutions",
+    description: "Step into seamless healthcare operations with expert billing services that support your financial health and free you to focus on patient care",
     image: "https://img.freepik.com/free-photo/copy-space-heart-shape-stethoscope_23-2148519790.jpg?ga=GA1.1.95786444.1738247124&semt=ais_hybrid&w=740",
     buttonText: "Learn More"
   },
   {
     id: 2,
-    title: "Expert Medical Care",
-    description: "Our team of specialists provides comprehensive care tailored to your unique needs.",
+    title: "Efficient Medical Billing Services",
+    description: "Our expert billing team ensures accurate, timely claims processing to maximize your revenue and minimize administrative burden",
     image: "https://img.freepik.com/premium-vector/medical-health-care-science-innovation-background_115579-832.jpg?ga=GA1.1.95786444.1738247124&semt=ais_hybrid&w=740",
-    buttonText: "Our Doctors"
+    buttonText: "Learn more"
   },
   {
     id: 3,
-    title: "Advanced Technology",
-    description: "Experience healthcare powered by the latest medical innovations and technology.",
+    title: "Streamlined Billing Solutions",
+    description: "Experience hassle-free revenue management with cutting-edge billing systems designed to improve accuracy, speed, and cash flow",
     image: "https://img.freepik.com/premium-vector/medical-health-care-science-innovation-background_115579-832.jpg?ga=GA1.1.95786444.1738247124&semt=ais_hybrid&w=740",
     buttonText: "Discover More"
   }

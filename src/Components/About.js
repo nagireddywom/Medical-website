@@ -84,7 +84,7 @@ const AboutSection = () => {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-slate-800">500+</div>
+                  <div className="text-2xl font-bold text-slate-800">100+</div>
                   <div className="text-sm text-slate-500">Happy Clients</div>
                 </div>
               </div>
@@ -136,7 +136,7 @@ const AboutSection = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
             >
-              At MB Consultancy & Services, we understand the challenges healthcare providers face with billing and revenue management. Our team of experts is committed to delivering tailored solutions that optimize your revenue cycle and reduce administrative burden.
+              At SV MB Consultancy & Services, we understand the challenges healthcare providers face with billing and revenue management. Our team of experts is committed to delivering tailored solutions that optimize your revenue cycle and reduce administrative burden.
             </motion.p>
             
             <motion.p 
