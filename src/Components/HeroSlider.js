@@ -192,6 +192,16 @@ const HeroSlider = () => {
   const handleDotClick = (index) => {
     setCurrentIndex(index);
   };
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      // Smooth scroll to the element
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
   
   return (
     <div 
@@ -242,7 +252,8 @@ const HeroSlider = () => {
                   {slides[currentIndex].description}
                 </p>
                 <div className="flex gap-4">
-                  <button className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-3 rounded-full font-medium transition-all hover:-translate-y-1 hover:shadow-lg relative overflow-hidden group">
+                  <button onClick={() => scrollToSection('services-section')}
+                  className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-3 rounded-full font-medium transition-all hover:-translate-y-1 hover:shadow-lg relative overflow-hidden group">
                     <span className="relative z-10">{slides[currentIndex].buttonText}</span>
                     <span className="absolute inset-0 bg-gradient-to-r from-blue-50/0 via-blue-50/40 to-blue-50/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
                   </button>

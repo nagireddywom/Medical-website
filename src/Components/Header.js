@@ -269,7 +269,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Mb from './Assets/MB Logo2.jpg'
 
-const Header = () => {
+const Header = ({scrollToSection}) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -346,14 +346,24 @@ const Header = () => {
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-500 group-hover:w-full transition-all duration-300"></span>
           </a>
           
-          <a href="/about" className={`px-4 py-2 font-medium relative group ${
+          <a href="/about" 
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('about-section');
+              }}
+          className={`px-4 py-2 font-medium relative group ${
             isScrolled ? 'text-gray-800 hover:text-teal-600' : 'text-white hover:text-white/80'
           }`}>
             About Us
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-500 group-hover:w-full transition-all duration-300"></span>
           </a>
           
-          <a href="/services" className={`px-4 py-2 font-medium relative group ${
+          <a href="/services"
+           onClick={(e) => {
+            e.preventDefault();
+            scrollToSection('services-section');
+           }}
+          className={`px-4 py-2 font-medium relative group ${
             isScrolled ? 'text-gray-800 hover:text-teal-600' : 'text-white hover:text-white/80'
           }`}>
             Services
@@ -377,6 +387,7 @@ const Header = () => {
               px-6 py-2.5 rounded-full font-medium transition-all hover:shadow-lg`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => scrollToSection('contact-section')}
           >
             Contact Us
           </motion.button>
@@ -413,20 +424,31 @@ const Header = () => {
                 <a href="/" className="px-3 py-2 text-gray-800 hover:text-teal-600 font-medium border-b border-gray-100">
                   Home
                 </a>
-                <a href="/about" className="px-3 py-2 text-gray-800 hover:text-teal-600 font-medium border-b border-gray-100">
+                <a href="/about" 
+                 onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection('about-section');
+                  }}
+                className="px-3 py-2 text-gray-800 hover:text-teal-600 font-medium border-b border-gray-100">
                   About Us
                 </a>
-                <a href="/services" className="px-3 py-2 text-gray-800 hover:text-teal-600 font-medium border-b border-gray-100">
+                <a href="/services"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection('services-section');
+                   }}
+                className="px-3 py-2 text-gray-800 hover:text-teal-600 font-medium border-b border-gray-100">
                   Services
                 </a>
-                <a href="/contact" className="px-3 py-2 text-gray-800 hover:text-teal-600 font-medium">
+                {/* <a href="/contact" className="px-3 py-2 text-gray-800 hover:text-teal-600 font-medium">
                   Contact Us
-                </a>
-                {/* <div className="pt-2">
-                  <button className="w-full bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-md font-medium transition-all">
+                </a> */}
+                <div className="pt-2">
+                  <button onClick={() => scrollToSection('contact-section')}
+                  className="w-full bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-md font-medium transition-all">
                     Contact Us
                   </button>
-                </div> */}
+                </div>
               </nav>
             </div>
           </motion.div>

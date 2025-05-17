@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const PremiumFooter = () => {
+const PremiumFooter = ({scrollToSection,navItems}) => {
   const currentYear = new Date().getFullYear();
   
   // Animation variants
@@ -117,7 +117,7 @@ const PremiumFooter = () => {
               <span className="absolute -bottom-1 left-0 w-12 h-0.5 bg-blue-500"></span>
             </h3>
             
-            <ul className="space-y-3">
+            {/* <ul className="space-y-3">
               {['Home', 'Services', 'About Us', 'Contact Us'].map((item, index) => (
                 <motion.li 
                   key={item}
@@ -133,7 +133,28 @@ const PremiumFooter = () => {
                   </a>
                 </motion.li>
               ))}
-            </ul>
+            </ul> */}
+              <ul className="space-y-3">
+        {navItems.map((item) => (
+          <motion.li
+            key={item.name}
+            whileHover={{ x: 5 }}
+            transition={{ type: 'spring', stiffness: 400 }}
+          >
+            <a
+              href={`#${item.id}`}
+              onClick={(e) => {
+                e.preventDefault(); // Prevent default anchor behavior
+                scrollToSection(item.id);
+              }}
+              className="text-slate-300 hover:text-white transition-colors duration-300 flex items-center group"
+            >
+              <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              {item.name}
+            </a>
+          </motion.li>
+        ))}
+      </ul>
           </motion.div>
 
           {/* Business Hours */}

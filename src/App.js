@@ -231,17 +231,39 @@ import ServicesShowcase from './Components/ServiceShowcase';
 import MedicalServiceSlider from './Components/ServiceSlider';
 
 function App() {
+
+  const navItems = [
+    { name: 'Home', id: 'home' },
+    { name: 'Services', id: 'services-section' },
+    { name: 'About Us', id: 'about-section' },
+    { name: 'Contact Us', id: 'contact-section' }
+  ];
+
+  
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      // Smooth scroll to the element
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  
   return (
     <div className="min-h-screen">
-      <Header />
+      <Header scrollToSection={scrollToSection}/>
       <HeroSlider />
       {/* <ServiceSlider /> */}
-      <MedicalServiceSlider/>
-      <AboutSection />
+      <div id="services-section" ><MedicalServiceSlider scrollToSection={scrollToSection}/></div>
+     
+     <div id="about-section"><AboutSection scrollToSection={scrollToSection}/></div> 
       {/* <ServicesShowcase /> */}
       <MedicalWorkflowProcess />
-      <AppointmentForm/>
-      <PremiumFooter />
+     <div id="contact-section"><AppointmentForm  scrollToSection={scrollToSection}/></div> 
+      <PremiumFooter scrollToSection={scrollToSection} navItems={navItems}/>
       {/* You can add more sections below the hero slider */}
     </div>
   );

@@ -91,7 +91,7 @@ const colorSchemes = {
   ]
 };
 
-const MedicalServiceSlider = () => {
+const MedicalServiceSlider = ({scrollToSection}) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(1);
   const intervalRef = useRef(null);
@@ -613,7 +613,8 @@ const MedicalServiceSlider = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
                       >
-                        <button className={`px-6 py-2 rounded-lg text-white bg-gradient-to-r ${getColorScheme(activeIndex).primary} hover:shadow-lg transition duration-300 transform hover:-translate-y-1`}>
+                        <button onClick={() => scrollToSection('about-section')}
+                        className={`px-6 py-2 rounded-lg text-white bg-gradient-to-r ${getColorScheme(activeIndex).primary} hover:shadow-lg transition duration-300 transform hover:-translate-y-1`}>
                           Learn More
                         </button>
                       </motion.div>
