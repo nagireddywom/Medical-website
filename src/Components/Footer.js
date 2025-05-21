@@ -84,12 +84,15 @@ const PremiumFooter = ({scrollToSection,navItems}) => {
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                   </svg>
                 </div>
-                <span className="text-slate-300 group-hover:text-white transition-colors duration-300">info@medibcs.com</span>
+                <span className="text-slate-300 group-hover:text-white transition-colors duration-300">hr@svmedicalbillings.com
+
+                </span>
               </motion.div>
             </div>
             
             {/* <div className="flex space-x-4 pt-2">
               {['facebook', 'twitter', 'linkedin', 'instagram'].map((social, index) => (
+                
                 <motion.a
                   key={social}
                   href={`#${social}`}
